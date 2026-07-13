@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rizki Azhari - Portfolio</title>
 
-    <!-- Fonts: Inter for UI, Space Grotesk for Display, JetBrains Mono for Code/Tech -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,13 +12,10 @@
       rel="stylesheet"
     />
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom Tailwind Configuration -->
     <script>
       tailwind.config = {
         theme: {
@@ -101,14 +97,12 @@
   <body
     class="font-sans antialiased selection:bg-appleBlue/10 selection:text-appleBlue"
   >
-    <!-- Top Navigation Bar (Apple Style Glassmorphism) -->
     <header
       class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/75 border-b border-appleBorder transition-all duration-300"
     >
       <div
         class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"
       >
-        <!-- Monogram Logo -->
         <a
           href="#"
           onclick="showDashboard(event)"
@@ -130,7 +124,6 @@
           </div>
         </a>
 
-        <!-- Middle Quick Navigation -->
         <nav
           class="hidden md:flex items-center space-x-8 text-sm font-medium text-appleTextSecondary"
         >
@@ -142,14 +135,13 @@
           >
           <a
             href="#expertise-section"
+            onclick="navigateToExpertise(event)"
             class="hover:text-appleBlue transition-colors duration-200"
             >Keahlian Utama</a
           >
         </nav>
 
-        <!-- Right Side Contact Badge & Status -->
         <div class="flex items-center space-x-4">
-          <!-- CV Access Link -->
           <div class="flex items-center space-x-2">
             <a
               href="images/CvRizki.pdf"
@@ -172,16 +164,11 @@
       </div>
     </header>
 
-    <!-- Main Wrapper with dynamic SPA views -->
     <main class="min-h-[calc(100vh-4rem)]">
-      <!-- ==============================================
-           VIEW 1 & 2: MAIN DASHBOARD
-           ============================================== -->
       <div
         id="dashboard-view"
         class="transition-all duration-500 ease-out transform opacity-100 scale-100"
       >
-        <!-- Hero & Intro Section (Screen 1) -->
         <section class="max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-12">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-5 flex justify-center order-1 md:order-1">
@@ -213,11 +200,9 @@
               </div>
             </div>
 
-            <!-- Right: Content & Title Block -->
             <div
               class="md:col-span-7 flex flex-col items-start space-y-6 order-1 md:order-2 text-left"
             >
-              <!-- Title & Subtitle Group -->
               <div class="space-y-2">
                 <h1
                   class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-appleTextPrimary leading-tight"
@@ -231,7 +216,6 @@
                 </p>
               </div>
 
-              <!-- Pitch Paragraph -->
               <p
                 class="text-base text-appleTextSecondary leading-relaxed max-w-xl"
               >
@@ -249,7 +233,6 @@
                 untuk efisiensi sistem informasi, otomasi, dan manajemen
                 infrastruktur data perusahaan.
               </p>
-              <!-- Tech Stack Dock Container (Screen 1 Requirement) -->
               <div class="w-full pt-4">
                 <p
                   class="text-xs font-semibold uppercase tracking-widest text-appleTextSecondary mb-3"
@@ -257,11 +240,9 @@
                   KOMPETENSI KEAHLIAN
                 </p>
 
-                <!-- The Floating Dock (macOS / iOS style) -->
                 <div
                   class="inline-flex items-center bg-white/60 backdrop-blur-xl border border-appleBorder shadow-appleSubtle rounded-[24px] p-2.5 gap-2.5 transition-all duration-300 hover:shadow-appleCardHover hover:border-appleBlue/10"
                 >
-                  <!-- Python Badged Dock Item -->
                   <div
                     class="group relative flex flex-col items-center p-2.5 rounded-2xl bg-white border border-appleBorder hover:border-[#ffe873]/50 hover:bg-[#ffe873]/5 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                   >
@@ -274,7 +255,6 @@
                       class="text-[10px] font-bold text-appleTextPrimary mt-1.5"
                       >Python</span
                     >
-                    <!-- Tooltip -->
                     <div
                       class="absolute -top-10 scale-0 group-hover:scale-100 transition-transform duration-200 bg-appleTextPrimary text-white text-[10px] py-1 px-2.5 rounded-lg font-medium whitespace-nowrap shadow-md pointer-events-none"
                     >
@@ -282,7 +262,6 @@
                     </div>
                   </div>
 
-                  <!-- JavaScript Badged Dock Item -->
                   <div
                     class="group relative flex flex-col items-center p-2.5 rounded-2xl bg-white border border-appleBorder hover:border-[#f7df1e]/50 hover:bg-[#f7df1e]/5 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                   >
@@ -295,7 +274,6 @@
                       class="text-[10px] font-bold text-appleTextPrimary mt-1.5"
                       >JavaScript</span
                     >
-                    <!-- Tooltip -->
                     <div
                       class="absolute -top-10 scale-0 group-hover:scale-100 transition-transform duration-200 bg-appleTextPrimary text-white text-[10px] py-1 px-2.5 rounded-lg font-medium whitespace-nowrap shadow-md pointer-events-none"
                     >
@@ -303,7 +281,6 @@
                     </div>
                   </div>
 
-                  <!-- Cisco Badged Dock Item -->
                   <div
                     class="group relative flex flex-col items-center p-2.5 rounded-2xl bg-white border border-appleBorder hover:border-[#00bceb]/50 hover:bg-[#00bceb]/5 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                   >
@@ -316,7 +293,6 @@
                       class="text-[10px] font-bold text-appleTextPrimary mt-1.5"
                       >Cisco</span
                     >
-                    <!-- Tooltip -->
                     <div
                       class="absolute -top-10 scale-0 group-hover:scale-100 transition-transform duration-200 bg-appleTextPrimary text-white text-[10px] py-1 px-2.5 rounded-lg font-medium whitespace-nowrap shadow-md pointer-events-none"
                     >
@@ -324,7 +300,6 @@
                     </div>
                   </div>
 
-                  <!-- IoT & Robotics Badged Dock Item (C++) -->
                   <div
                     class="group relative flex flex-col items-center p-2.5 rounded-2xl bg-white border border-appleBorder hover:border-[#00599c]/50 hover:bg-[#00599c]/5 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                   >
@@ -337,7 +312,6 @@
                       class="text-[10px] font-bold text-appleTextPrimary mt-1.5"
                       >IoT & Robotics</span
                     >
-                    <!-- Tooltip -->
                     <div
                       class="absolute -top-10 scale-0 group-hover:scale-100 transition-transform duration-200 bg-appleTextPrimary text-white text-[10px] py-1 px-2.5 rounded-lg font-medium whitespace-nowrap shadow-md pointer-events-none"
                     >
@@ -345,7 +319,6 @@
                     </div>
                   </div>
 
-                  <!-- Database SQL Badged Dock Item -->
                   <div
                     class="group relative flex flex-col items-center p-2.5 rounded-2xl bg-white border border-appleBorder hover:border-[#00758f]/50 hover:bg-[#00758f]/5 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                   >
@@ -358,7 +331,6 @@
                       class="text-[10px] font-bold text-appleTextPrimary mt-1.5"
                       >Database</span
                     >
-                    <!-- Tooltip -->
                     <div
                       class="absolute -top-10 scale-0 group-hover:scale-100 transition-transform duration-200 bg-appleTextPrimary text-white text-[10px] py-1 px-2.5 rounded-lg font-medium whitespace-nowrap shadow-md pointer-events-none"
                     >
@@ -371,17 +343,14 @@
           </div>
         </section>
 
-        <!-- Divider Line -->
         <div class="max-w-6xl mx-auto px-6">
           <div class="h-px w-full bg-appleBorder"></div>
         </div>
 
-        <!-- 3 Core Expertise Blocks (Screen 2 Requirement) -->
         <section
           id="expertise-section"
           class="max-w-6xl mx-auto px-6 py-16 space-y-12"
         >
-          <!-- Section Header -->
           <div class="text-center max-w-2xl mx-auto space-y-3 mb-10">
             <span
               class="text-xs font-bold uppercase tracking-widest text-appleBlue"
@@ -400,21 +369,14 @@
             </p>
           </div>
 
-          <!-- Expertise Block Container -->
-          <div id="expertise-blocks" class="space-y-10">
-            <!-- Dynamic elements will be rendered here by JS, showing 3 premium horizontal blocks -->
-          </div>
+          <div id="expertise-blocks" class="space-y-10"></div>
         </section>
       </div>
 
-      <!-- ==============================================
-           VIEW 3: SEAMLESS SPA DETAIL VIEW
-           ============================================== -->
       <div
         id="detail-view"
         class="hidden opacity-0 scale-95 transition-all duration-500 ease-out max-w-6xl mx-auto px-6 py-12"
       >
-        <!-- Back Navigation Header -->
         <div class="flex items-center justify-between mb-8">
           <button
             onclick="showDashboard(event)"
@@ -435,11 +397,9 @@
           </div>
         </div>
 
-        <!-- Core Detail Card -->
         <div
           class="bg-white rounded-3xl border border-appleBorder overflow-hidden shadow-appleSubtle p-8 md:p-12 space-y-12"
         >
-          <!-- Detail Head Title Section -->
           <div class="space-y-4 max-w-3xl">
             <h2
               id="detail-title"
@@ -455,9 +415,7 @@
             </p>
           </div>
 
-          <!-- Section A: Overview & Project Visual Gallery (Clean Grid) -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-4">
-            <!-- Left Side: Large Overview Typography -->
             <div class="lg:col-span-6 space-y-6 text-left">
               <h3
                 class="text-lg font-bold text-appleTextPrimary tracking-tight flex items-center"
@@ -476,7 +434,6 @@
                 serta implementasi nyata di lapangan.
               </p>
 
-              <!-- Project Specification Sheet Table -->
               <div class="pt-4">
                 <h4
                   class="text-xs font-bold uppercase tracking-widest text-appleTextSecondary mb-3"
@@ -487,15 +444,12 @@
                   class="border border-appleBorder rounded-2xl overflow-hidden bg-appleBg/40"
                 >
                   <table class="w-full text-left text-sm">
-                    <tbody id="detail-spec-table">
-                      <!-- Specs dynamic table contents -->
-                    </tbody>
+                    <tbody id="detail-spec-table"></tbody>
                   </table>
                 </div>
               </div>
             </div>
 
-            <!-- Right Side: Gallery of project illustrations / diagrams -->
             <div class="lg:col-span-6 space-y-6">
               <h3
                 class="text-lg font-bold text-appleTextPrimary tracking-tight flex items-center"
@@ -507,19 +461,16 @@
                 Galeri Visual Arsitektur & UI
               </h3>
 
-              <!-- 3-Image Gallery Layout (Masonry/Responsive Grid) -->
-              <div id="detail-gallery-grid" class="grid grid-cols-2 gap-4">
-                <!-- Gallery items will render here dynamically -->
-              </div>
+              <div
+                id="detail-gallery-grid"
+                class="grid grid-cols-2 gap-4"
+              ></div>
             </div>
           </div>
 
-          <!-- Divider Line inside card -->
           <div class="h-px w-full bg-appleBorder"></div>
 
-          <!-- Section B: Key System Architecture (UML Process) & Core Features -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <!-- Key System Architecture timeline style -->
             <div class="space-y-6 text-left">
               <h3
                 class="text-lg font-bold text-appleTextPrimary tracking-tight flex items-center"
@@ -531,16 +482,12 @@
                 Tahapan Arsitektur Sistem Utama
               </h3>
 
-              <!-- Step-by-step Apple timeline tracker -->
               <div
                 id="detail-architecture-timeline"
                 class="space-y-6 relative pl-6 border-l border-appleBorder"
-              >
-                <!-- Steps render dynamically here -->
-              </div>
+              ></div>
             </div>
 
-            <!-- Core Features checklist grid -->
             <div class="space-y-6 text-left">
               <h3
                 class="text-lg font-bold text-appleTextPrimary tracking-tight flex items-center"
@@ -552,18 +499,14 @@
                 Fitur Unggulan & Kapabilitas Sistem
               </h3>
 
-              <!-- Custom grid of features -->
               <div
                 id="detail-features-grid"
                 class="grid grid-cols-1 sm:grid-cols-2 gap-4"
-              >
-                <!-- Features render dynamically here -->
-              </div>
+              ></div>
             </div>
           </div>
         </div>
 
-        <!-- Back to Dashboard Bottom Action -->
         <div class="mt-8 flex justify-center">
           <button
             onclick="showDashboard(event)"
@@ -578,20 +521,18 @@
         </div>
       </div>
     </main>
-    <!-- Image Lightbox Modal -->
+
     <div
       id="image-lightbox"
       class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 opacity-0 transition-opacity duration-300 pointer-events-none"
       onclick="closeLightbox()"
     >
-      <!-- Tombol Close -->
       <button
         class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors p-2 bg-white/10 rounded-full"
       >
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
-      <!-- Kontainer Gambar -->
       <div
         class="relative max-w-5xl max-h-[85vh] flex flex-col items-center space-y-3"
         onclick="event.stopPropagation()"
@@ -609,12 +550,10 @@
       </div>
     </div>
 
-    <!-- Footer Area -->
     <footer
       class="bg-white border-t border-appleBorder py-12 text-center text-sm text-appleTextSecondary mt-12"
     >
       <div class="max-w-6xl mx-auto px-6 space-y-6">
-        <!-- Brand/Identity logo signature -->
         <div class="flex items-center justify-center space-x-3.5">
           <span
             class="font-display font-bold text-appleTextPrimary tracking-tight text-sm"
@@ -626,7 +565,6 @@
           >
         </div>
 
-        <!-- Description Statement -->
         <p
           class="max-w-md mx-auto text-xs text-appleTextSecondary leading-relaxed"
         >
@@ -635,16 +573,12 @@
           serta standar aksesibilitas visual yang inklusif.
         </p>
 
-        <!-- System status metadata signature (No unrequested telemetry / larp tech logging) -->
         <div class="text-[10px] text-appleTextSecondary/60 font-mono">
           &copy; 2026 Rizki Azhari. All rights reserved. Indonesia.
         </div>
       </div>
     </footer>
 
-    <!-- ==============================================
-         SPA LOGIC & DATA DEFINITION
-         ============================================== -->
     <script>
       // Graceful image fallbacks to avoid broken profile/screenshots on standalone offline launch
       function handleProfileImageFallback(imgElement) {
@@ -652,16 +586,8 @@
           "Local profile asset could not be loaded. Applying high-quality premium CDN fallback.",
         );
         imgElement.src =
-          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"; // Premium smiling Asian tech lead avatar
-        imgElement.onerror = null; // Prevent infinite loop
-      }
-
-      function handleScreenshotFallback(imgElement, fallbackUrl) {
-        console.warn(
-          "Local screenshot asset could not be loaded. Applying high-quality CDN fallback.",
-        );
-        imgElement.src = fallbackUrl;
-        imgElement.onerror = null; // Prevent infinite loop
+          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
+        imgElement.onerror = null;
       }
 
       // Complete structured data array of Rizki Azhari's main portfolio competencies (Indonesian translations)
@@ -720,28 +646,6 @@
               {
                 name: "Dynamic Growth Projection",
                 desc: "Menghasilkan proyeksi tren masa depan hingga tahun 2045 yang dilengkapi dengan parameter kendali batas kenaikan tahunan (Max Annual Increase).",
-              },
-            ],
-            specifications: [
-              {
-                label: "Bahasa Pemrograman",
-                val: "Python 3.x (PyTorch Ecosystem)",
-              },
-              {
-                label: "Framework & Library",
-                val: "PyTorch (nn.Module), TensorFlow/Keras, Scikit-Learn, Pandas, Scipy",
-              },
-              {
-                label: "Arsitektur Model",
-                val: "4-Layer Bidirectional LSTM dengan Dropout (0.3)",
-              },
-              {
-                label: "Fitur Masukan (Input Size)",
-                val: "10 Variabel Makroekonomi & Lag Features",
-              },
-              {
-                label: "Rentang Proyeksi Tren",
-                val: "Tahun 2024 s/d 2045 (Exponential & Linear Growth Mode)",
               },
             ],
             specifications: [
@@ -979,115 +883,107 @@
       // On Document Load: Initialize Components and Render main Dashboard cards
       document.addEventListener("DOMContentLoaded", () => {
         renderExpertiseBlocks();
-
-        // Initialize Lucide Icons initially
         lucide.createIcons();
       });
 
-      // Render the 3 Core Expertise Blocks (Screen 2 Layout: Horizontal premium columns)
+      // Render the 3 Core Expertise Blocks
       function renderExpertiseBlocks() {
         const container = document.getElementById("expertise-blocks");
-        container.innerHTML = ""; // Clear existing
+        container.innerHTML = "";
 
         expertises.forEach((item, index) => {
-          // Create Block container
           const block = document.createElement("div");
-
-          // Apple horizontal grid class styling
           block.className = `group bg-white rounded-[32px] border border-appleBorder p-8 md:p-10 shadow-appleSubtle transition-all duration-300 hover:shadow-appleCardHover hover:border-appleBlue/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center`;
 
-          // Check if block index is odd to stagger images left/right on wide layouts for visual rhythm
           const imageColumnOrder =
             index % 2 === 1 ? "lg:order-1" : "lg:order-2";
           const textColumnOrder = index % 2 === 1 ? "lg:order-2" : "lg:order-1";
 
           block.innerHTML = `
-            <!-- Left content side (span 7) -->
             <div class="lg:col-span-7 flex flex-col items-start space-y-4 text-left ${textColumnOrder}">
-              <!-- Badge/Category Indicator -->
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-appleBlue"></div>
                 <span class="text-[10px] font-bold uppercase tracking-widest text-appleTextSecondary">Keahlian Utama ${String.fromCharCode(65 + index)}</span>
               </div>
-              
-              <!-- Title -->
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-appleTextPrimary tracking-tight">
-                ${item.title}
-              </h3>
-              
-              <!-- Subtitle -->
-              <p class="text-sm font-semibold text-appleBlue">
-                ${item.subtitle}
-              </p>
-              
-              <!-- Description -->
-              <p class="text-sm text-appleTextSecondary leading-relaxed max-w-xl">
-                ${item.description}
-              </p>
-              
-              <!-- Mini Badges/Pills Grid -->
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-appleTextPrimary tracking-tight">${item.title}</h3>
+              <p class="text-sm font-semibold text-appleBlue">${item.subtitle}</p>
+              <p class="text-sm text-appleTextSecondary leading-relaxed max-w-xl">${item.description}</p>
               <div class="flex flex-wrap gap-2 pt-2">
-                ${item.skills
-                  .map(
-                    (skill) => `
-                  <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-[10px] font-semibold bg-appleLightGray text-appleTextPrimary border border-appleBorder/60">
-                    ${skill}
-                  </span>
-                `,
-                  )
-                  .join("")}
+                ${item.skills.map((skill) => `<span class="inline-flex items-center px-2.5 py-1 rounded-lg text-[10px] font-semibold bg-appleLightGray text-appleTextPrimary border border-appleBorder/60">${skill}</span>`).join("")}
               </div>
-
-              <!-- Minimal Apple CTA Button (Selengkapnya ->) -->
               <div class="pt-4">
-                <button 
-                  onclick="navigateToDetail('${item.id}', event)"
-                  class="group/btn inline-flex items-center px-4.5 py-2.5 rounded-full bg-appleTextPrimary text-white text-xs font-semibold hover:bg-appleBlue transition-all duration-200 shadow-sm"
-                >
+                <button onclick="navigateToDetail('${item.id}', event)" class="group/btn inline-flex items-center px-4.5 py-2.5 rounded-full bg-appleTextPrimary text-white text-xs font-semibold hover:bg-appleBlue transition-all duration-200 shadow-sm">
                   <span>Selengkapnya</span>
                   <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1.5 transition-transform duration-200 group-hover/btn:translate-x-1"></i>
                 </button>
               </div>
             </div>
-
-            <!-- Right visual screenshot container (span 5) -->
             <div class="lg:col-span-5 ${imageColumnOrder} flex justify-center">
               <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-appleLightGray border border-appleBorder p-1.5 shadow-sm transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-md">
                 <div class="w-full h-full rounded-xl overflow-hidden relative bg-white">
-                  <img 
-                    src="${item.image}" 
-                    alt="${item.title} Screenshot" 
-                    class="w-full h-full object-cover"
-                    referrerpolicy="no-referrer"
-                    onerror="handleScreenshotFallback(this, '${item.fallbackImage}')"
-                  />
-                  <!-- Elegant gradient mask -->
+                  <img src="${item.image}" alt="${item.title} Screenshot" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.src='${item.fallbackImage}'" />
                   <div class="absolute inset-0 bg-gradient-to-t from-appleTextPrimary/5 to-transparent pointer-events-none"></div>
                 </div>
               </div>
             </div>
           `;
-
           container.appendChild(block);
         });
       }
 
-      // Single Page Application (SPA) Routing & Populator (Screen 3 Requirement)
+      // **NAVIGASI PINTAR FIXED BUG:** Mengembalikan ke Dashboard lalu smooth scroll ke keahlian utama
+      function navigateToExpertise(event) {
+        event.preventDefault();
+
+        const dashView = document.getElementById("dashboard-view");
+        const detailView = document.getElementById("detail-view");
+
+        // Jika sedang di halaman detail, kembalikan dulu ke dashboard secara mulus
+        if (dashView.classList.contains("hidden")) {
+          detailView.classList.add("opacity-0", "scale-95");
+
+          setTimeout(() => {
+            detailView.classList.add("hidden");
+            dashView.classList.remove("hidden");
+
+            // Trigger reflow agar animasi Tailwind berjalan kembali
+            void dashView.offsetWidth;
+
+            dashView.classList.remove(
+              "opacity-0",
+              "scale-95",
+              "pointer-events-none",
+            );
+            dashView.classList.add("opacity-100", "scale-100");
+
+            // Gulung otomatis ke bagian Keahlian Utama setelah dashboard muncul
+            const targetSection = document.getElementById("expertise-section");
+            if (targetSection) {
+              targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }, 300);
+        } else {
+          // Jika memang sudah berada di dashboard, langsung gulung smooth ke bawah
+          const targetSection = document.getElementById("expertise-section");
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+
+      // Single Page Application (SPA) Routing & Populator
       function navigateToDetail(id, event) {
         if (event) event.preventDefault();
 
-        // Find matching expertise model
         const target = expertises.find((item) => item.id === id);
         if (!target) return;
 
-        // 1. Populate Screen 3 content
         document.getElementById("detail-title").innerText = target.title;
         document.getElementById("detail-subtitle").innerText = target.subtitle;
         document.getElementById("detail-overview").innerText =
           target.detail.overview;
         document.getElementById("detail-badge").innerText = target.subtitle;
 
-        // 2. Populate Technical Specifications Table
         const specTable = document.getElementById("detail-spec-table");
         specTable.innerHTML = "";
         target.detail.specifications.forEach((spec) => {
@@ -1100,31 +996,18 @@
           specTable.appendChild(row);
         });
 
-        // 3. Populate Gallery Screenshots Grid
         const galleryGrid = document.getElementById("detail-gallery-grid");
         galleryGrid.innerHTML = "";
-
         target.detail.gallery.forEach((pic, i) => {
           const colSpan = i === 0 ? "col-span-2" : "col-span-1";
           const item = document.createElement("div");
           item.className = `${colSpan} group/gallery relative overflow-hidden rounded-2xl border border-appleBorder bg-appleLightGray aspect-[16/10] shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer`;
-
-          // Memasang fungsi klik langsung ke gambar & menambahkan tombol expand di pojok kanan atas
           item.innerHTML = `
             <div class="w-full h-full relative" onclick="openLightbox('${pic.url}', '${pic.caption}')">
-              <img 
-                src="${pic.url}" 
-                alt="${pic.caption}" 
-                class="w-full h-full object-cover transition-transform duration-500 group-hover/gallery:scale-105"
-                referrerpolicy="no-referrer"
-              />
-              
-              <!-- Tombol Perbesar/Maximize di Sudut Kanan Atas -->
+              <img src="${pic.url}" alt="${pic.caption}" class="w-full h-full object-cover transition-transform duration-500 group-hover/gallery:scale-105" referrerpolicy="no-referrer" />
               <div class="absolute top-3 right-3 bg-white/80 backdrop-blur-md border border-appleBorder p-2 rounded-xl opacity-0 group-hover/gallery:opacity-100 transition-all duration-300 hover:bg-appleBlue hover:text-white hover:scale-105 shadow-sm z-10 flex items-center justify-center text-appleTextPrimary">
                 <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
               </div>
-
-              <!-- Dark Overlay Glassmorphism Captions -->
               <div class="absolute bottom-2 left-2 right-2 bg-white/80 backdrop-blur-md border border-appleBorder px-3 py-1.5 rounded-xl opacity-0 group-hover/gallery:opacity-100 transition-opacity duration-300 pointer-events-none">
                 <p class="text-[10px] font-bold text-appleTextPrimary text-center">${pic.caption}</p>
               </div>
@@ -1133,7 +1016,6 @@
           galleryGrid.appendChild(item);
         });
 
-        // 4. Populate Timeline Architecture Step Flow
         const timeline = document.getElementById(
           "detail-architecture-timeline",
         );
@@ -1142,22 +1024,15 @@
           const item = document.createElement("div");
           item.className = "relative space-y-1.5 group/step";
           item.innerHTML = `
-            <!-- Step Bullet indicator node -->
             <div class="absolute -left-[31px] top-1.5 w-4.5 h-4.5 rounded-full bg-white border-2 border-appleBlue flex items-center justify-center text-[8px] font-bold text-appleBlue transition-all duration-300 group-hover/step:bg-appleBlue group-hover/step:text-white">
               ${i + 1}
             </div>
-            
-            <h4 class="text-sm font-bold text-appleTextPrimary tracking-tight">
-              ${step.title}
-            </h4>
-            <p class="text-xs text-appleTextSecondary leading-relaxed">
-              ${step.desc}
-            </p>
+            <h4 class="text-sm font-bold text-appleTextPrimary tracking-tight">${step.title}</h4>
+            <p class="text-xs text-appleTextSecondary leading-relaxed">${step.desc}</p>
           `;
           timeline.appendChild(item);
         });
 
-        // 5. Populate Core Features Grid
         const featuresGrid = document.getElementById("detail-features-grid");
         featuresGrid.innerHTML = "";
         target.detail.features.forEach((feat) => {
@@ -1169,21 +1044,15 @@
               <div class="p-1 bg-appleBlue/10 text-appleBlue rounded-lg">
                 <i data-lucide="check" class="w-3.5 h-3.5"></i>
               </div>
-              <h4 class="text-xs font-bold text-appleTextPrimary">
-                ${feat.name}
-              </h4>
+              <h4 class="text-xs font-bold text-appleTextPrimary">${feat.name}</h4>
             </div>
-            <p class="text-[11px] text-appleTextSecondary leading-relaxed pl-7">
-              ${feat.desc}
-            </p>
+            <p class="text-[11px] text-appleTextSecondary leading-relaxed pl-7">${feat.desc}</p>
           `;
           featuresGrid.appendChild(item);
         });
 
-        // 6. Refresh Lucide Icons to render new icons
         lucide.createIcons();
 
-        // 7. Fire transition animations to hide dashboard and show detail view
         const dashView = document.getElementById("dashboard-view");
         const detailView = document.getElementById("detail-view");
 
@@ -1192,14 +1061,9 @@
         setTimeout(() => {
           dashView.classList.add("hidden");
           detailView.classList.remove("hidden");
-
-          // Trigger reflow
           void detailView.offsetWidth;
-
           detailView.classList.remove("opacity-0", "scale-95");
           detailView.classList.add("opacity-100", "scale-100");
-
-          // Smooth scroll to top of screen
           window.scrollTo({ top: 0, behavior: "smooth" });
         }, 300);
       }
@@ -1216,22 +1080,18 @@
         setTimeout(() => {
           detailView.classList.add("hidden");
           dashView.classList.remove("hidden");
-
-          // Trigger reflow
           void dashView.offsetWidth;
-
           dashView.classList.remove(
             "opacity-0",
             "scale-95",
             "pointer-events-none",
           );
           dashView.classList.add("opacity-100", "scale-100");
-
-          // Smooth scroll back to showcase blocks
           window.scrollTo({ top: 0, behavior: "smooth" });
         }, 300);
       }
-      // Fungsi untuk Membuka Gambar Ukuran Penuh
+
+      // Fungsi Lightbox Modal Gambar Ukuran Penuh
       function openLightbox(url, caption) {
         const lightbox = document.getElementById("image-lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
@@ -1241,15 +1101,11 @@
         lightboxCap.innerText = caption;
 
         lightbox.classList.remove("hidden");
-        // Trigger reflow untuk animasi smooth transition opacity
         void lightbox.offsetWidth;
         lightbox.classList.remove("opacity-0", "pointer-events-none");
-
-        // Kunci scroll body utama saat melihat gambar
         document.body.style.overflow = "hidden";
       }
 
-      // Fungsi untuk Menutup Gambar
       function closeLightbox() {
         const lightbox = document.getElementById("image-lightbox");
         lightbox.classList.add("opacity-0", "pointer-events-none");
