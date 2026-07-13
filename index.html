@@ -931,7 +931,7 @@
         });
       }
 
-      // **NAVIGASI PINTAR FIXED BUG:** Mengembalikan ke Dashboard lalu smooth scroll ke keahlian utama
+      // NAVIGASI PINTAR FIXED BUG: Mengembalikan ke Dashboard lalu smooth scroll ke keahlian utama
       function navigateToExpertise(event) {
         event.preventDefault();
 
@@ -955,6 +955,13 @@
               "pointer-events-none",
             );
             dashView.classList.add("opacity-100", "scale-100");
+
+            // Bersihkan hash dari URL secara diam-diam tanpa memicu event listener
+            history.replaceState(
+              null,
+              document.title,
+              window.location.pathname + window.location.search,
+            );
 
             // Gulung otomatis ke bagian Keahlian Utama setelah dashboard muncul
             const targetSection = document.getElementById("expertise-section");
@@ -1065,6 +1072,9 @@
           detailView.classList.remove("opacity-0", "scale-95");
           detailView.classList.add("opacity-100", "scale-100");
           window.scrollTo({ top: 0, behavior: "smooth" });
+
+          // FIX BUG HP: Daftarkan hash '#detail' ke riwayat navigasi browser saat masuk halaman detail
+          window.location.hash = "detail";
         }, 300);
       }
 
@@ -1088,8 +1098,30 @@
           );
           dashView.classList.add("opacity-100", "scale-100");
           window.scrollTo({ top: 0, behavior: "smooth" });
+
+          // FIX BUG HP: Bersihkan hash jika masih tertinggal tanpa merusak riwayat navigasi
+          if (window.location.hash === "#detail") {
+            history.replaceState(
+              null,
+              document.title,
+              window.location.pathname + window.location.search,
+            );
+          }
         }, 300);
       }
+
+      // FIX BUG HP UTAMA: Interseptor tombol Kembali/Back bawaan Smartphone
+      window.addEventListener("hashchange", function () {
+        const dashView = document.getElementById("dashboard-view");
+
+        // Jika pengguna menekan tombol back fisik HP sehingga hash #detail menghilang, kembalikan ke dashboard
+        if (
+          window.location.hash !== "#detail" &&
+          dashView.classList.contains("hidden")
+        ) {
+          showDashboard();
+        }
+      });
 
       // Fungsi Lightbox Modal Gambar Ukuran Penuh
       function openLightbox(url, caption) {
